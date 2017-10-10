@@ -14,3 +14,5 @@
 python manage.py startapp blog
 9.  注册blog应用：在settings.py中，INSTALLED_APPS加入:'blog',
 10. 编写博客模型models.py代码
+11. 迁移数据库：python manage.py makemigrations
+ python manage.py migrate

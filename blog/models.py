@@ -9,6 +9,9 @@ class Category(models.Model):
 
     """
     name = models.CharField(max_length = 100)
+    def __str__(self):
+        return self.name
+
 
 class Tag(models.Model):
     """
@@ -16,6 +19,8 @@ class Tag(models.Model):
 
     """
     name = models.CharField(max_length = 100)
+    def __str__(self):
+        return self.name
 
 class Post(models.Model):
     """
@@ -50,3 +55,7 @@ class Post(models.Model):
     #这里我们通过ForeignKey把文章和User关联起来
     #因为我们规定一篇文章只能有一个作者，而一个作者可能会写很多文章，因此关联是一对多
     author = models.ForeignKey(User)
+
+
+    def __str__(self):
+        return self.title
