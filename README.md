@@ -18,5 +18,6 @@ python manage.py startapp blog
  python manage.py migrate
 12. 回到指定的版本
 在github上点击commit，找copy full the SHA。然后复制，这个就是commit_id
-git reset --hard commit_id 
+git reset --hard commit_id
 git push origin HEAD --force
+13. 博客视图
