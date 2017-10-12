@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 class Category(models.Model):
     """
@@ -59,3 +60,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    # 自定义get_absolute_url方法
+    # 记得从django.urls中导入reverse函数
+    def get_absolute_url(self):
+        return reverse('blog:detail',kwargs={'pk':self.pk})
